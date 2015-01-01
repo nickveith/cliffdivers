@@ -1,0 +1,23 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+
+  <h1>Welcome Cliffdivers!</h1>
+
+</div><!-- /.jumbotron -->
+
+
+<div class="body-content">
+  {% for song in songs %}
+  <div class="row">
+    <div class="col-lg-4">
+    <p><a class="btn btn-default" href={{ song.id }}>{{ song.entity_name }} &raquo;</a></p>
+    </div>
+  </div><!-- /.row -->
+  {% endfor %}
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,22 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+
+  <h1> {{ asset.entity_asset_path }} </h1>
+
+</div><!-- /.jumbotron -->
+
+<div class="body-content">
+  <div class="row">
+    <div class="col-lg-4">
+      <audio controls tabindex="0">
+        <source type="audio/mpeg" src="{{ url_for('static',filename='uploads/') }}{{ asset.entity_asset_path }}"/>
+      </audio>
+    </div>
+  </div><!-- /.row -->
+</div>
+
+{% endblock %}
+
